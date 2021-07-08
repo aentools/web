@@ -5,7 +5,7 @@ $(function () {
     bar += '<div>';
     bar += '<ul class="nav navbar-nav">';
     bar += '<li id="aen"><a href="index.html">Home</a></li>';
-    bar += '<li id="aentools"><a href="https://aentools.herokuapp.com/about" target="_blank">About</a></li>';
+    bar += '<li id="aentools"><a href="https://aentools.herokuapp.com/about">About</a></li>';
     bar += '<li id="blog"><a href="mlc.html">Codes</a></li>';
     bar += '</ul>';
     bar += '</div>';
