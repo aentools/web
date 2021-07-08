@@ -24,6 +24,7 @@
 li {
   display: inline;
 }
+  a {color: green;}
   h1 {color: gray;}
   h2, p {color: black;}
 
@@ -39,45 +40,6 @@ input[type=submit] {
   cursor: pointer;
 }
 
-form {
-<!--margin: 0 15%;-->
-width: 40em;
-border: 1px solid #666;
-border-radius: 10px;
-box-shadow: .2em .2em .5em #999;
-background-color:transparent;
-padding: 1em;
-overflow: hidden;
-}
-label {
-display: block;
-float: left;
-width: 10em;
-text-align: right;
-margin-right: .5em;
-color: black;
-}
-input.textinput {
-width: 30em;
-height: 2em;
-border: 1px solid #666;
-}
-
-textarea {
-display: block;
-width: 30em;
-height: 5em;
-border: 1px solid #666;
-margin-bottom: 1em;
-line-height: 1.25;
-overflow: auto;
-resize: none;
-}
-}
-input.textinput, textarea {
-font-family: Georgia, "Times New Roman", Times, serif;
-font-size: .875em;
-}
   </style>  
 
 
@@ -89,6 +51,13 @@ font-size: .875em;
     <script src="./static/nav-bar.js?id=index" id="nav-bar"></script>
 
     <header class="container">
+
+    <div>
+    <ul class="nav navbar-nav">
+    <li><a href="./descriptors.html">Custom set of descriptors - SMILES (07/03/2021)</a></li>
+    </ul>
+    </div>
+
     <section class="content">
        <h1>AENCODE</h1>
       <p><img src="./static/img/shell.png" alt="SHELL" style="width:100px;height:80px;"></a></p>
@@ -97,15 +66,14 @@ font-size: .875em;
 </header>
     </section>
 
-      <center><form action="https://aen.code.blog" target="_blank">
+<!--      <center><form action="https://aen.code.blog" target="_blank">
       <a href="https://aentools.herokuapp.com/"><img src="./static/img/LOGO.png" alt="logo"></a>
       <p id="news" class="sub-title">news!</p></br></br>
 <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Faentools%2Fposts%2F218133460162697&show_text=true&width=500" width="500" height="470" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
       <p id="contact" class="sub-title"><strong>Toward chemical discovery revolution</strong> <br /> From molecular big data to chemical discovery</p>
               <input type="submit" value="Check it out on blog!">
 
-      </form><br /></center>
-
+      </form><br /></center>-->
 
 </body>
 </html>

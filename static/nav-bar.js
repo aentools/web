@@ -4,9 +4,7 @@ $(function () {
     bar += '<div class="container-fluid">';
     bar += '<div>';
     bar += '<ul class="nav navbar-nav">';
-    bar += '<li id="aen"><a href="index.html">Home</a></li>';
-    bar += '<li id="aentools"><a href="https://aentools.herokuapp.com/about">About</a></li>';
-    bar += '<li id="blog"><a href="mlc.html">Codes</a></li>';
+    bar += '<li id="blog"><a href="home.html">Articles</a></li>';
     bar += '</ul>';
     bar += '</div>';
     bar += '</div>';
