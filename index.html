@@ -1,112 +1,130 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="HandheldFriendly" content="true">
-    <title>AENCODE</title>
+<html lang="en">
+<title>AENCODE</title>
 
-<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+
+
+<head>
+<script data-ad-client="ca-pub-7775451143350488" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <!-- Not required: presentational-only.css only contains CSS for prettifying the demo -->
-    <link rel="stylesheet" href="./static/css/presentational-only.css">
+<!--<link href="/static/css/style.css" rel="stylesheet">-->
 
-  <!-- responsive-full-background-image.css stylesheet contains the code you want -->
-  <link rel="stylesheet" href="./static/css/background-image.css">
- 
-
-
-
- <style>
-li {
-  display: inline;
-}
-  h1 {color: gray;}
-  h2, p {color: black;}
-
-input[type=submit] {
-  background-color: black;
-  border-radius: 50%;
-  color: white;
-  padding: 12px 24px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 18px;
-  cursor: pointer;
-}
-
-form {
-<!--margin: 0 15%;-->
-width: 40em;
-border: 1px solid #666;
-border-radius: 10px;
-box-shadow: .2em .2em .5em #999;
-background-color:transparent;
-padding: 1em;
-overflow: hidden;
-}
-label {
-display: block;
-float: left;
-width: 10em;
-text-align: right;
-margin-right: .5em;
-color: black;
-}
-input.textinput {
-width: 30em;
-height: 2em;
-border: 1px solid #666;
-}
-
-textarea {
-display: block;
-width: 30em;
-height: 5em;
-border: 1px solid #666;
-margin-bottom: 1em;
-line-height: 1.25;
-overflow: auto;
-resize: none;
-}
-}
-input.textinput, textarea {
-font-family: Georgia, "Times New Roman", Times, serif;
-font-size: .875em;
-}
-  </style>  
-
-
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-search,.fa-coffee {font-size:200px}
+</style>
 </head>
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-blue w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-blue" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="https://aentools.herokuapp.com/" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+    <a href="https://aentools.herokuapp.com/about/" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">About</a>
+    <a href="https://aentools.herokuapp.com/projects/" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Projects</a>
+    <a href="https://aentools.herokuapp.com/news/" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">News!</a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="https://aentools.herokuapp.com/about/" class="w3-bar-item w3-button w3-padding-large">About</a>
+    <a href="https://aentools.herokuapp.com/projects/" class="w3-bar-item w3-button w3-padding-large">Projects</a>
+    <a href="https://aentools.herokuapp.com/news/" class="w3-bar-item w3-buttom w3-padding-large">News!</a>
+  </div>
+</div>
+
+
+
 <body>
-    <div class="navbar" id="main-bar"></div>
-    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
-    <!--add this line to generate the nav bar-->
-    <script src="./static/nav-bar.js?id=index" id="nav-bar"></script>
 
-    <header class="container">
-    <section class="content">
-       <h1>AENCODE</h1>
-      <p><img src="./static/img/shell.png" alt="SHELL" style="width:100px;height:80px;"></a></p>
-      <p class="sub-title"><strong>computational modeling</strong> <br /> From density functional theory to classical atomistic simulations</p>
-<!--      <p><img src="./static/img/shell.png" alt="SHELL" style="width:100px;height:80px;"></a></p>-->
+<!-- Header -->
+<header class="w3-container w3-blue w3-center" style="padding:24px 3px">
+  <h1 class="w3-margin w3-jumbo">AENCODE</h1>
+  <p><img src="./static/img/shell.png" alt="shell" style="width:100px;height:80px;"></p>
+  <p class="w3-xlarge">COMPUTATIONAL MODELING</p>
 </header>
-    </section>
 
-      <center><form action="https://aen.code.blog" target="_blank">
-      <a href="https://aentools.herokuapp.com/"><img src="./static/img/LOGO.png" alt="logo"></a>
-      <p id="news" class="sub-title">news!</p></br></br>
-<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Faentools%2Fposts%2F218133460162697&show_text=true&width=500" width="500" height="470" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-      <p id="contact" class="sub-title"><strong>Toward chemical discovery revolution</strong> <br /> From molecular big data to chemical discovery</p>
-              <input type="submit" value="Check it out on blog!">
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-third w3-center">
+      <a href="/projects"><i class="fa fa-search w3-padding-64 w3-text-gray w3-margin-left"></i></a>
+    </div>
+    <div class="w3-twothird">
+      <h1>Welcome to our page!</h1>
+      <h5 class="w3-padding-32">Whatever the reason that brought you here, we encourage you to continue browsing, as we are sure that you will find what you are looking for.</h5>
 
-      </form><br /></center>
+      <p class="w3-text-grey">We will present here an interdisciplinary integrated research report describing computational modeling techniques and analytical programming in a Unix environment (routines to automate data extraction and processing with Shell, Python, and Java scripts) to provide an overview of recent advances in big data and Machine Learning (ML) concepts applied in chemistry.</p> 
+      <img src="./static/img/shell.png" alt="shell" style="width:25%">
+      <img src="./static/img/python.png" alt="python" style="width:25%">
+      <img src="./static/img/java.png" alt="java" style="width:40%"><br /></br />
+    </div>
+  </div>
+</div>
 
+<!-- Second Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <div class="w3-content">
+
+    <div class="w3-twothird">
+      <h1>Keep reading...</h1>
+      <p class="w3-text-grey">In addition, we will demonstrate the applications of these techniques for simulating energy storage devices known as Electrical Double-Layer Supercapacitors (EDLS) using simulation packages (Molecular Dynamics and Density Functional Theory).</p>
+      <img src="./static/img/qe.jpg" alt="qe" style="width:33%">
+      <img src="./static/img/gromacs.jpg" alt="gromacs" style="width:25%">
+      <img src="./static/img/lammps.jpg" alt="lammps" style="width:25%"><br /></br >
+      <p class="w3-text-grey"> ML problems can be divided into three broad classes:</p>
+      <ul>
+        <li><p class="w3-text-grey">Supervised</p></li>
+        <li><p class="w3-text-grey">Unsupervised</p></li>
+        <li><p class="w3-text-grey">Reinforcement</p></li>
+      </ul> 
+       <p class="w3-text-grey">Supervised learning is used when you have previous data with results (labels in ML terminology) and you want to predict the results for the future. On the other hand, unsupervised learning mainly deals with unlabeled data, allowing the model to work on its own to discover patterns and information that have not been previously detected. Reinforcement learning is said to be the hope of true AI. Read more at <a href="https://aen.code.blog">blog!</a></p>
+    </div>
+    <div class="w3-third w3-center">
+      <a href="https://aentools.github.io/aencode" target="_blank"><i class="fa fa-coffee w3-padding-64 w3-text-gray w3-margin-right"></a></i>
+    </div>
+  </div>
+</div>
+
+<div class="w3-container w3-blue w3-center w3-opacity w3-padding-64">
+    <h1 class="w3-margin w3-xlarge">Quote of the day: Great question, let me find that out for you right now!</h1>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity">  
+  <div class="w3-xlarge w3-padding-32">
+    <a href="https://www.facebook.com/aentools"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <a href="https://www.linkedin.com/in/antenor-neto-8239551b7"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+ </div>
+
+ <a href="/code/" class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get started</a>
+
+ <p>Under Construction <a href="#">by aentools 2021</a></p>
+</footer>
+
+<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
 
 </body>
 </html>
-
