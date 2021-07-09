@@ -14,10 +14,10 @@
 body {
   margin: 0;
   padding: 0;
-  font: 18px/23px "Cantarell", sans-serif;
 }
 /* Layout */
 .navbar {
+  font: 18px/23px "Cantarell", sans-serif;
   width: 100%;
   z-index: 9999;
   position: fixed;
@@ -39,11 +39,13 @@ body {
     This is the simplest way to reflect a molecule. The idea behind is to use simple line notations for chemical formulas that are based on some rules. Atoms of chemical elements are represented by chemical symbols in capital letter, hydrogen is usually ignored. Single bonds are not displayed; for double, triple and quadruple bonds we shall use '=', '#', '$' respectively.
     One can actually represent the information by creating suitable descriptors that are belivied to be helpful - bond count, atom count, presence of particular groups of atoms an etc. Such descriptors may be exctracted from SMILES strings.
    </p>
-   <h2>
+
+      <h2 id="Introduction">
    RDkit for working with SMILES
-   </h2>
-   <p>
-   </p>
+       <a class="anchor-link" href="#Introduction">
+        ¶
+       </a>
+      </h2>
    <p>
    RDKit is a collection of cheminformatics and machine learning tools written in C++ and Python. Which is more important, it allows to work with many representations of chemical data and has a power to extract almost each chemical descriptor from the data you have. Check the docs for deeper understanding.
    </p>
