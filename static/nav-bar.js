@@ -4,7 +4,7 @@ $(function () {
     bar += '<a href="index.html" class="active">Home</a>';
     bar += '<a href="about.html">About Us</a>';
     bar += '<a href="news.html">News</a>';
-    bar += '<a href="https://aencode.herokuapp.com/projects">Projects</a>';
+    bar += '<a href="projects.html">Projects</a>';
     bar += '<a href="contact.html">Contact</a>';
     bar += '<a href="javascript:void(0);" class="icon" onclick="myFunction()">';
     bar += '<i class="fa fa-bars"></i>';
