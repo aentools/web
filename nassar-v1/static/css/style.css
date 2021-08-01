@@ -1,19 +1,7 @@
 html, body, .container {
   height: 100%;
-}
-
-/* Reset */
-html, body, h1, p, a, div, section {
   margin: 0;
   padding: 0;
-  font-size: 100%;
-  font: inherit;
-}
-
-/* Basic */
-body { 
-  font-family: Arial, Helvetica, sans-serif;
-  color: #ffffff;
 }
 
 /* Layout */
@@ -215,8 +203,8 @@ nav ul li ul li a {
 .about-section {
   padding: 50px;
   text-align: center;
-  background-color: #53514F;
-  color: white;
+  background-color: transparent;
+/*  color: white;*/
 }
 
 footer {
