@@ -1,104 +1,16 @@
 <!DOCTYPE html>
 <html>
-<head>
-<script>
-function getQuote() {
-// Create the arrays
-quotes = [];
-sources = [];
-// Initialize the arrays with quotes
-quotes[0] = "When I was a boy of 14, my father was so " +
-"ignorant...but when I got to be 21, I was astonished " +
-"at how much he had learned in 7 years.";
-sources[0] = "Mark Twain";
-quotes[1] = "Everybody is ignorant. Only on a " +
-"subjects.";
-sources[1] = "Will Rogers";
-quotes[2] = "They say such nice things about people at " +
-"their funerals that it makes me sad that I’m going to " +
-"miss mine by just a few days.";
-sources[2] = "Garrison Keilor";
-quotes[3] = "What’s another word for thesaurus?";
-sources[3] = "Steven Wright";
-// Get a random index into the arrays
-i = Math.floor(Math.random() * quotes.length);
-// Write out the quote as HTML
-document.write("<dl>\n");
-document.write("<dt>" + "\"<em>" + quotes[i] + "</em>\"\n");
-document.write("<dd>" + "- " + sources[i] + "\n");
-document.write("<dl>\n");
-}
-// Stop hiding the script
-</script>
+    <head>
+   <title>aen | code</title>
+   <!--Import Google Icon Font-->
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <!-- Compiled and minified CSS -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+   <link rel="stylesheet" href="./css/style.css">
+   <!--Let browser know website is optimized for mobile-->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
 <style>
-body
-{
-  font: 15px/1.5 Arial, Helvetica,sans-serif;
-  padding:0;
-  margin:0;
-  background-color:#f4f4f4;
-}
-main {
-margin:20px;
-}
-.card {
-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-border-radius:10px;
-padding: 10px;
-}
-.nav-wrapper a{
-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-background: lightgrey;
-text-align: center;
-padding: 10px;
-float:left;
-display:block;
-text-decoration:none;
-color:grey;
-font-weight:bold
-}
-.date {
-clear:left;
-}
-#navbar {
-background-color:#0679c9;
-position:fixed;
-top: 0;
-width: 100%;
-font-weight:bold;
-text-transform:uppercase;
-transition: top 0.3s;
-}
-#navbar a {
-float: left;
-display: block;
-color: #fff;
-text-align: center;
-padding: 15px;
-text-decoration: none;
-}
-#navbar a:hover {
-background-color: #fff;
-color: black;
-font-weight:bold;
-}
-#navbar a.active{
-background:#fff;
-color:#333;
-}
-.shadow {
-color: #fff;
-/*font-size: 50px;*/
-text-shadow: -1px 1px 0 #35424a, 1px 1px 0 #35424a, 1px -1px 0 #35424a, -1px -1px 0 #35424a;
-}
-footer{
-  padding:20px;
-  margin-top:20px;
-  color:#fff;
-  background-color:#0679c9;
-  text-align: center;
-  border-top:#333 3px solid;
-}
 #hide_content {
 display: none;
 }
@@ -123,71 +35,53 @@ text-decoration: none;
 font-weight: bold;
 color: #E03A3E;
 }
-
 </style>
-<title>Online Editor</title>
 </head>
 
 <body>
-
-<div id="navbar">
-  <a href="#index.html">Home</a>
-  <a href="#about.html">About</a>
-  <a href="#services.html">Services</a>
-  <a class="active" href="#blog.html">Blog</a>
+<div id="navbar" class="blue darken-2">
+  <a class="active" href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="services.html">Services</a>
+  <a href="blog.html">Blog</a>
 </div>
-<div class="shadow" style="padding-top:30px;text-align:center;background: #0679c9"><h1>AEN</h1>
 
-<!--<img src="img/logo.png" style="width:33%; padding:50px 0px 0px 0px" alt="">-->
-<p><h2>Consulting Design and Tools</h2></p><br>
-</div>
-<main>
-  <nav>  
-    <div class="nav-wrapper">
-    <a href="#hide.html">Home &raquo</a>
-    <a href="#blog.html">Blog</a>     
-    </div></nav><br><br><br>
-    <div class="row">
-        <div class="col s12 m6">
-            <div class="card">
-                <div class="card-image">
-                    <img src="./static/img/showcase5.png"><span class="card-title" style="color:#fff">AENCODE</span>
-                        </div>
-                        <div class="card-content"> <p>Simple, responsive Web pages and sites that result in web apps. Accessible information and services delivery.</p>
-                </div>
-            </div>
+<section style="border-bottom:#0679c9 3px solid;" id="showcase" class="shadow case1">
+      <div class="container">
+        <!--<h1>AENCODE</h1>
+        <img src="img/logo.png" style="width:33%; padding:50px 0px 0px 0px" alt=""> -->
+       <h1 style="padding-top:30px">AENCODE</h1>
+        <p>Simple, responsive web pages with accessible information and service delivery.</p>
+      </div>
+    </section>
+
+    <section id="boxes">
+      <div class="container">
+        <div class="box">
+          <img src="./static/img/showcase3.jpg">
+          <h3>HTML5 Markup</h3>
+          <p>Web pages and sites that result in web apps - services
+that perform work for the user.</p>
         </div>
-   </div>
+        <div class="box">
+          <img src="./static/img/showcase5.jpg">
+          <h3>CSS3 Styling</h3>
+          <p>With CSS and HTML, we can code solutions for your business, driving your users, processes and design to create more tangible value for everyone.</p>
+        </div>
+        <div class="box">
+          <img src="./static/img/showcase2.jpg">
+          <h3>Graphic Design</h3>
+          <p>Attractive, consistent, and functional web pages and web apps fully compatible with PC, tablets, and mobile devices.</p>
+        </div>
+      </div>
+    </section>
 
-    <ol class="collection>
-
-        <li><span class="title"><h2 style="color:grey">Posts:</h2></span></li><hr>
-
-        <li><span class="title"><h3>Django vs Node.js: A Comparative Analysis</h3></span>
-<script>
-    published = "May 29, 2022";
-    document.write("<strong>Published on:</strong> "+published);
-</script></li><hr>
-
-        <li><span class="title"><h3>Computational Science Applied in Chemistry and Materials</h3></span>
-<script>
-    published = "May 29, 2022";
-    document.write("<strong>Published on:</strong> "+published);
-</script></li><hr>
-
-</ol>
-
-<div class="card" style="background:lightgrey">
-<script>
-    getQuote()
-</script>
-</div>
-<p style="text-align:center">To see a new quote just reload this page.</p>
-</main>
-   <footer>
+  <footer>
       <p>AENCODE Tools, Copyright &copy; 2022</p>
-    </footer>
+  </footer>
 
+<!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
             <script>
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
@@ -197,6 +91,13 @@ window.onscroll = function() {
   }
 prevScrollpos = currentScrollPos;
 }
+       var banners=["shadow case1","shadow case2","shadow case3"];
+var bannerAtual = 0;
+function trocaBanner() {
+bannerAtual = (bannerAtual+1)%3;
+document.getElementById("showcase").className = banners[bannerAtual];
+}
+setInterval(trocaBanner, 4000);
         </script>
     </body>
 </html>
