@@ -22,7 +22,7 @@
 
 <section style="border-bottom:#0679c9 3px solid;" id="showcase" class="shadow case1">
       <div class="container">
-        <img src="./static/img/logo.png" style="width:33%; padding:50px 0px 0px 0px" alt="">
+        <img src="./static/img/logo.png" style="width:33%; padding:70px 0px 0px 0px" alt="">
        <!--<h1 style="padding-top:30px">AENCODE</h1>-->
         <p>Simple, responsive web pages with accessible information and service delivery.</p>
       </div>
@@ -64,5 +64,16 @@
 
 <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+           <script>
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {    document.getElementById("navbar").style.top = "0";
+  } else {    document.getElementById("navbar").style.top = "-70px";
+  }
+prevScrollpos = currentScrollPos;
+}
+<script>
+
 </body>
 </html>
