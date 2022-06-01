@@ -12,7 +12,7 @@ top: 0;
 width: 100%;
 z-index:3;
 font-weight:bold;
-text-decoration:uppercase;
+text-transform:uppercase;
 transition: top 0.3s;
 }
 #navbar a {
