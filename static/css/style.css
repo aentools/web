@@ -51,22 +51,22 @@ aen-footer{
   text-align: center;
   border-top:#333333 3px solid;
 }
-#hide_e {
+#hide_content {
 display: none;
 }
-#elevation {
+#content {
 display: none;
 }
-#hide_p {
+#hide_img {
 display: none;
 }
-#photos {
+#images {
 display: none;
 }
-#show_e {
+#show_content {
 display: block;
 }
-#show_p {
+#show_images {
 display: block;
 }
 .fakelink {
