@@ -10,6 +10,7 @@ background-color:transparent #35424a;
 position: fixed;
 top: 0;
 width: 100%;
+z-index:3;
 font-weight:bold;
 transition: top 0.3s;
 }
