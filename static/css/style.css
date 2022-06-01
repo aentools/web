@@ -127,13 +127,13 @@ header a{
   color:#ffffff;
 }
 .case1 {
-background:url('../static/img/showcase3.png') no-repeat;
+background:url('../img/showcase3.png') no-repeat;
 }
 .case2 {
-background:url('../static/img/showcase2.png') no-repeat;
+background:url('../img/showcase2.png') no-repeat;
 }
 .case3 {
-background:url('../static/img/showcase5.png') no-repeat;
+background:url('../img/showcase5.png') no-repeat;
 }
 #showcase, .case1, .case2, .case3{
 background-position: center;
