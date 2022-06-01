@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <head>
+   <head>
    <title>aen | code</title>
    <!--Import Google Icon Font-->
    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -9,34 +9,38 @@
    <link rel="stylesheet" href="./static/css/style.css">
    <!--Let browser know website is optimized for mobile-->
    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   
+       <script>
+function getQuote() {
+// Create the arrays
+quotes = [];
+sources = [];
+// Initialize the arrays with quotes
+quotes[0] = "When I was a boy of 14, my father was so " +
+"ignorant...but when I got to be 21, I was astonished " +
+"at how much he had learned in 7 years.";
+sources[0] = "Mark Twain";
+quotes[1] = "Everybody is ignorant. Only on a " +
+"subjects.";
+sources[1] = "Will Rogers";
+quotes[2] = "They say such nice things about people at " +
+"their funerals that it makes me sad that I’m going to " +
+"miss mine by just a few days.";
+sources[2] = "Garrison Keilor";
+quotes[3] = "What’s another word for thesaurus?";
+sources[3] = "Steven Wright";
+// Get a random index into the arrays
+i = Math.floor(Math.random() * quotes.length);
+// Write out the quote as HTML
+document.write("<dl>\n");
+document.write("<dt>" + "\"<em>" + quotes[i] + "</em>\"\n");
+document.write("<dd>" + "- " + sources[i] + "\n");
+document.write("<dl>\n");
+}
+// Stop hiding the script
+       </script>
     
-<style>
-#hide_content {
-display: none;
-}
-#content {
-display: none;
-}
-#hide_img {
-display: none;
-}
-#images {
-display: none;
-}
-#show_content {
-display: block;
-}
-#show_images {
-display: block;
-}
-.fakelink {
-cursor:pointer;
-text-decoration: none;
-font-weight: bold;
-color: #E03A3E;
-}
-</style>
-</head>
+    </head>
 
 <body>
 <div id="navbar" class="blue darken-2">
