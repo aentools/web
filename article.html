@@ -85,6 +85,7 @@ font-weight: bold;
 color: #E03A3E;
 }
 #TOC { 
+display: none;
 text-align:center;
 background:url("");
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5); 
@@ -102,6 +103,12 @@ padding: 50px;
 
 .TOCSectNum:after { content: " "; }
 .TOCSectNum { display: none }
+
+@media screen and (max-width: 600px) { 
+#TOC {
+display:block;
+} 
+}
 </style>	
 		<title>AEN</title>
 	</head>
@@ -185,7 +192,7 @@ Depois que esse script inicial for carregado, vc carregará dinamicamente todos 
 </div>
 
 </main>
-    <script type="text/javascript" src="toc.js"></script>
+    <script type="text/javascript" src="./static/toc.js"></script>
    <footer>
       <p>AENCODE Tools, Copyright &copy; 2022</p>
     </footer>
