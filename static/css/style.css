@@ -45,14 +45,6 @@ footer{
   text-align: center;
   border-top:#333333 3px solid;
 }
-aen-footer{
-  padding:20px;
-  margin-top:20px;
-  color:#ffffff;
-  background-color:#0679c9;
-  text-align: center;
-  border-top:#333333 3px solid;
-}
 #hide_content {
 display: none;
 }
@@ -248,3 +240,23 @@ ul#services li{
     margin-bottom:5px;
   }
 }
+
+#TOC { 
+background:url("");
+margin: 5%;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5); 
+margin: 30px;
+padding: 50px;
+}
+
+.TOCEntry { font-family: sans-serif; }
+
+.TOCEntry a { text-decoration: none; }
+
+.TOCLevel1 { font-size: 16pt; font-weight: bold; }
+
+.TOCLevel2 { font-size: 12pt; margin-left: .5in; }
+
+.TOCSectNum:after { content: " "; }
+.TOCSectNum { display: none }
+
