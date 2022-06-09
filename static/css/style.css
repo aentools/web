@@ -6,7 +6,8 @@ body
   background-color:#f4f4f4;
 }
 #navbar {
-background-color:transparent #35424a;
+border-bottom:#333 3px solid;
+background-color:#35424a;
 position: fixed;
 top: 0;
 width: 100%;
