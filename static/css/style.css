@@ -243,7 +243,8 @@ ul#services li{
 }
 
 #TOC { 
-background:url("./static/img/aen.png") no-repeat;
+background:url("../img/aen.png");
+background-repeat: no-repeat;
 margin: 5%;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5); 
 margin: 30px;
