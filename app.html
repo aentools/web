@@ -15,5 +15,12 @@
   <!-- <div class="container-fluid"> <div class="row"> <div class="col-md-2">
        Search: <input ng-model="query"> </div> <div class="col-md-10">
     </div> -->
+  <script>
+var myApp = angular.module('myApp', []);
+myApp.config(function($interpolateProvider) {
+  $interpolateProvider.startSymbol('//');
+  $interpolateProvider.endSymbol('//');
+});
+</script>
 </body>
 </html>
