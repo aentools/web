@@ -5,15 +5,14 @@ var myApp = angular.module('myApp', []); myApp.controller('myController', functi
 $scope.clientes = [ {'nome': 'Nexus S', 'agencia': 'Fast just got faster Nexus S.'}, {'nome': 'Motorola XOOM Wi-Fi', 'agencia': 'The Next, Next Generation tablet.'}, {'nome': 'MOTOROLA XOOM', 'agencia': 'The Next, Next Generation tablet.'} ];
 });*/
 
-var myApp = angular.module('myApp', [])
-.controller('myController', function ($scope){
+angular.module('myApp', []).controller('myController', function ($scope){
    $scope.clientes = {
-     one: {
+      one: {
       nome: 'Jonny J.',
       agencia: '8292',
       conta:'900839-11'
       },
-     two: {
+      two: {
       nome: 'Fred A.',
       agencia: '8292',
       conta:'100839-12'
