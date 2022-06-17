@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
-<script src="/static/app.js"></script>
+<script type="text/javascript" src="/static/js/app.js"></script>
 </head>
 <body ng-app="myApp">
   <div ng-controller="myController">
@@ -10,10 +10,18 @@
             <p>{{cliente.conta}}</p>
             </li>
        </ul>
-  </div>
+       {{clientes.one.nome}}
+    </div>
   <!-- <div class="container-fluid"> <div class="row"> <div class="col-md-2">
        Search: <input ng-model="query"> </div> <div class="col-md-10">
-    </div> -->
- 
+            <ul class="clientes"> <li ng-repeat="cliente in clientes | filter:query"> {{cliente.nome}} <p>{{cliente.agencia}}</p> </li> </ul> </div> </div> </div>
+    </div>
+<script>
+var myApp = angular.module('myApp', []);
+myApp.config(function($interpolateProvider) {
+  $interpolateProvider.startSymbol('//');
+  $interpolateProvider.endSymbol('//');
+});
+</script> -->
 </body>
 </html>
