@@ -1,27 +1,17 @@
 <!DOCTYPE html>
+<html ng-app="prodApp">
 <head>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
-<script type="text/javascript" src="/static/app.js"></script>
+<script type="text/javascript" src="app.js"></script>
 </head>
-<body ng-app="myApp">
-  <div ng-controller="myController">
+<body ng-controller="ProdListController">
+  <div>
        <ul>
-            <li ng-repeat="cliente in clientes"> {{cliente.nome}}
-            <p>{{cliente.conta}}</p>
+            <li ng-repeat="item in itens">
+            <span>{{item.quantity}}</span>
             </li>
        </ul>
-       {{clientes.one.nome}}
-    </div>
-  <!-- <div class="container-fluid"> <div class="row"> <div class="col-md-2">
-       Search: <input ng-model="query"> </div> <div class="col-md-10">
-            <ul class="clientes"> <li ng-repeat="cliente in clientes | filter:query"> {{cliente.nome}} <p>{{cliente.agencia}}</p> </li> </ul> </div> </div> </div>
-    </div>
-<script>
-var myApp = angular.module('myApp', []);
-myApp.config(function($interpolateProvider) {
-  $interpolateProvider.startSymbol('//');
-  $interpolateProvider.endSymbol('//');
-});
-</script> -->
+  </div>
+
 </body>
 </html>
