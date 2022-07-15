@@ -2,15 +2,13 @@
 <html ng-app="prodApp">
 <head>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
-<script type="text/javascript" src="app.js"></script>
+<script type="text/javascript" src="static/app.js"></script>
 </head>
 <body ng-controller="ProdListController">
   <div>
-       <ul>
-            <li ng-repeat="item in itens">
-            <span>{{item.quantity}}</span>
-            </li>
-       </ul>
+         <div ng-repeat="item in itens">
+            <img ng-src="{{item.imgUrl}}" alt="">
+         </div>
   </div>
 
 </body>
