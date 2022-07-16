@@ -1,3 +1,1 @@
-angular.module('phonecatApp', ['phoneList',
-    'phoneImg'
-]);
+angular.module('phonecatApp', ['phoneList']);
