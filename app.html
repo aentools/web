@@ -1,15 +1,128 @@
 <!DOCTYPE html>
-<html ng-app="prodApp">
+<html>
 <head>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
-<script type="text/javascript" src="static/app.js"></script>
+<title>Online Editor</title>
+<style>
+#error{
+color:red
+}
+#success{
+color:blue
+}
+.action{
+text-decoration: underline; cursor:pointer;
+}
+span{
+border-right:1px solid #ccc;padding:10px;
+}
+</style>
 </head>
-<body ng-controller="ProdListController">
-  <div>
-         <div ng-repeat="item in itens">
-            <img ng-src="{{item.imgUrl}}" alt="">
-         </div>
-  </div>
+	
+<body>
 
+<div ng-controller="MessageController">
+<fieldset>
+<legend>Mensagem</legend>
+<form>
+<div id="sucess" ng-bind="succesMsg"></div>
+<div id="error" ng-bind="errorMsg"></div>
+ID:<input type="number" ng-model="msg.messageId"/><br />
+Texto:<input type="text" ng-model="msg.text"/><br />
+
+<button ng-click="query()">Buscar</button>
+<button ng-click="save()" ng-show="!msg.messageId">Salvar</button>
+<button ng-click="update()" ng-show="msg.messageId">Atualizar</button>
+<button ng-click="clear()">Limpar</button>
+</form>
+</fieldset>
+
+	<h2>-Mensagens-</h2>
+	<div ng-repeat='m in messages'>
+<span>{{m.messageId}}</span>
+<span>{{m.text}}</span>
+<span ng-click="edit(m)" class="action" title="Editor {{m.messageId}} - {{m.text}}">Editor</span>
+<span ng-click="remove(m, $index)" class="action" title="Remover {{m.messageId}} - {{m.text}}">Remover</span>
+</div>
+</div>
+
+<script type="text/javascript">
+var app=angular.module('myapp', ['ngResource']);
+app.controller('MessageController', ['$scope', '$resource', 
+   function ($scope, $resource){
+var Messages'=$resource('/myApp/api/messages/:messageId', 
+{messageId:"@messageId"},
+{
+   update:{
+      method:'PUT',
+      isArray:false
+   }
+}
+);
+
+$scope.messages=[];
+
+$scope.error=function (error){
+   $scope.succesMsg='';
+   $scope.errorMsg="Error - Status "+error.status;
+};
+
+$scope.success=function (successMsg, message){
+   $scope.msg=message;
+   $scope.succesMsg=successMsg;
+   $scope.errorMsg='';
+};
+
+$scope.clear=function (){
+   $scope.msg={};
+   $scope.successMsg='';
+   $scope.errorMsg='';
+};
+
+$scope.query=function (){
+   var params={};
+   params['id']=$scope.msg.messageId;
+   params['content']=$scope.msg.text;
+   Messages.query(params, function (messages){
+      $scope.messages=messages;
+    },
+    function (errorMsg){
+       $scope.error(errorMsg);
+    });
+};
+
+$scope.save=function (){
+   Messages.save({}, angular.toJson($scope.msg), function (message){
+      $scope.messages.push(message);
+      $scope.success("Mensagem criada com sucesso", message);
+   },
+   function (errorMsg){
+       $scope.error(errorMsg);
+   });
+};
+
+$scope.update=function (){
+   Messages.update({messageId: $scope.msg.messageId}, angular.toJson($scope.msg), function (message){
+      $scope.success("Mensagem atualizada com sucesso", message);
+   },
+   function (errorMsg){
+       $scope.error(errorMsg);
+   });
+};
+$scope.remove=function (){
+   Messages.remove({messageId:m.messageId}, angular.toJson(m), function (message){
+      $scope.success("Mensagem excluida com sucesso", null);
+      $scope.messages.splice(Index, 1);
+   },
+   function (errorMsg){
+       $scope.error(errorMsg);
+   });
+};
+
+$scope.edit=function (m){
+   $scope.msg =m;
+}
+
+}]);
+</script>
 </body>
 </html>
