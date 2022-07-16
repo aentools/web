@@ -15,7 +15,8 @@ template:
 '<!-- Product name-->'+
 '<h5 class="fw-bolder">{{phone.name}}</h5>'+
 '<!-- Product price-->'+
-'$40.00 - $80.00'+
+'<span class="text-muted text-decoration-line-through">$20.00</span>'+
+'$18.00'+
 '</div>'+
 '</div>'+
 '<!-- Product actions-->'+
